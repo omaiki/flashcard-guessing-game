@@ -1,6 +1,5 @@
-require 'bcrypt'
-
 class User < ActiveRecord::Base
-  include Bcrypt
-
+  has_many :rounds
+  has_many :guesses, through: :rounds
+  has_many :decks, through: :rounds
 end
