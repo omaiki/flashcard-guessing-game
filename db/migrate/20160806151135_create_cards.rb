@@ -5,6 +5,8 @@ class CreateCards < ActiveRecord::Migration
       t.string :answer
       t.belongs_to :deck
 
+
       t.timestamps null: false
+    end
   end
 end
