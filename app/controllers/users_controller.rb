@@ -1,3 +1,6 @@
+get '/users' do
+redirect :"users/new"
+end
 
 get '/users/new' do
   erb :"users/new"

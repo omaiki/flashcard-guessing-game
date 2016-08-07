@@ -1,3 +1,21 @@
-<h2> Welcome to your page, <%= @user.username %>! </h2>
+<h1> Welcome to your page, <%= @user.username %>! </h1>
 
- <a href="http://localhost:9393/decks">Click this to see available decks!</a>
+<h2> Pick a deck to play! </h2>
+  <div>
+  <% @user.decks.each do |deck| %>
+  <ul>
+    <li><a href="http://localhost:9393/decks/<%= deck.id%>"><%= deck.title %></a></li>
+  </ul>
+  <% end %>
+  <div>
+
+<!-- <a href="http://localhost:9393/decks">Click this to see available decks!</a> -->
+
+<div>
+<form action="/sessions" method="POST">
+  <input type="hidden" name="_method" value="DELETE">
+  <input type="submit" value="Logout">
+</form>
+<div>
+
+
