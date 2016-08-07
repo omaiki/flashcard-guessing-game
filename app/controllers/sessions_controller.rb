@@ -11,7 +11,7 @@ post '/sessions' do
  if @user
    if @user && @user.authenticate(params[:user][:password])
      session[:user_id] = @user.id
-     redirect "/users/#{session[:user_id]}"
+     redirect "/users/#{session[@user.id]}"
    else
    	 @error = "Invalid login information. Please try again."
      redirect 'sessions/new'

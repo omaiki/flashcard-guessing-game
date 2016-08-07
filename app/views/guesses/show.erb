@@ -1,0 +1,17 @@
+<%= @round.deck.title %>
+<br>
+<br>
+Question:
+<%= @guess.card.question %>
+<br>
+<br>
+<form action="/rounds/<%= @round.id %>/guesses/<%= @guess.card.id %>" method='post'>
+<input type="hidden" name="_method" value="put">
+  Enter your answer<br>
+  <input type='text' name='guess'><br><br>
+  <input type='submit' value='submit your guess'>
+</form>
+
+<%if @message %>
+<%= @message %>
+<% end %>
