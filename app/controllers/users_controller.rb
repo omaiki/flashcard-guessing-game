@@ -12,12 +12,13 @@ post '/users' do
     session[:id] = @user.id
       redirect "/sessions/new"
   else
-    @errors = @user.errors.full_messages
+    # @errors = @user.errors.full_messages
     erb :"users/new"
   end
 end
 
 get '/users/:id' do
   @user = User.find(session[:user_id])
+  @decks = Deck.all
   erb :"/users/show"
 end

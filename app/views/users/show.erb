@@ -2,14 +2,12 @@
 
 <h2> Pick a deck to play! </h2>
   <div>
-  <% @user.decks.each do |deck| %>
+  <% @decks.each do |deck| %>
   <ul>
-    <li><a href="http://localhost:9393/decks/<%= deck.id%>"><%= deck.title %></a></li>
+    <li><a href="/decks/<%= deck.id%>"><%= deck.title %></a></li>
   </ul>
   <% end %>
   <div>
-
-<!-- <a href="http://localhost:9393/decks">Click this to see available decks!</a> -->
 
 <div>
 <form action="/sessions" method="POST">
@@ -19,3 +17,5 @@
 <div>
 
 
+    <!-- http://localhost:9393 -->
+<!-- <a href="http://localhost:9393/decks">Click this to see available decks!</a> -->

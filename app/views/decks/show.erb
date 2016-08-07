@@ -1,14 +1,9 @@
+<h2><%= @deck.title %></h2>
 
-<% @deck.cards.each do |card_obj| %>
-<div><%= card_obj.question %> </div>
-<% end %>
-
-<div>
-<% @deck.cards.each do |card_obj| %>
-<div><%= card_obj.answer %> </div>
-<% end %>
-
-
+<form action="/rounds" method="post">
+  <input type="submit" value="start game">
+  <input type="hidden" name="deck_id" value="<%= @deck.id %>">
+</form>
 
 
 

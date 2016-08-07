@@ -23,3 +23,9 @@ delete '/sessions/:id' do
  session[:user_id] = nil
  redirect "/sessions/new"
 end
+
+
+# get '/sessions/logout' do
+#   session[:user_id] = nil
+#   redirect '/sessions/new'
+# end

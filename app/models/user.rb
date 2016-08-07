@@ -19,7 +19,7 @@ class User < ActiveRecord::Base
   end
 
   has_many :rounds
-  has_many :guesses, through: :rounds
-  has_many :decks
+  # has_many :guesses, through: :rounds
+  # has_many :decks
   #, through: :rounds
 end

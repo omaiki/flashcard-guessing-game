@@ -1,8 +1,5 @@
 <div class="container">
  <h1> Login to Flash Cards </h1>
- <% if @error %>
-   <%= @error %>
- <% end %>
  <form action="/sessions" method="POST">
    Username: <input type="text" name="user[username]" placeholder="Username"><br>
    Password: <input type="password" name="user[password]" placeholder="password"><br>
