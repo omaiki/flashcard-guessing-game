@@ -14,6 +14,9 @@ class User < ActiveRecord::Base
     self.password_hash = @password
   end
 
+   def authenticate(input_password)
+    self.password == input_password
+  end
 
   has_many :rounds
   has_many :guesses, through: :rounds
